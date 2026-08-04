@@ -1,0 +1,13 @@
+git:
+  paging:
+    colorArg: always
+    pager: delta --side-by-side --paging=never --line-numbers --syntax-theme="Catppuccin Latte"
+    # Option 1: GitHub theme (light)
+    # pager: delta --light --side-by-side --paging=never --line-numbers --syntax-theme="GitHub"
+    # # Option 2: Solarized Light
+    # pager: delta --light --side-by-side --paging=never --line-numbers --syntax-theme="Solarized (light)"
+    # # Option 3: OneHalfLight
+    # pager: delta --light --side-by-side --paging=never --line-numbers --syntax-theme="OneHalfLight"
+  branchLogCmd: 'git log --graph --color=always --pretty="%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset" --decorate=full {{branchName}} --'
+  allBranchesLogCmds:
+    - git log --graph --color=always --pretty="%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset" --all --decorate=full
