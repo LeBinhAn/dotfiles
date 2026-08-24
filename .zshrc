@@ -173,6 +173,15 @@ killport() {
         echo "Killed process $pid"
     fi
 }
+#
+# yazi shell wrapper
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	command yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd"
+	command rm -f -- "$tmp"
+}
 
 export FZF_DEFAULT_OPTS="
   --height=70%
@@ -211,3 +220,7 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # Added by Antigravity IDE
 export PATH="$HOME/.antigravity-ide/antigravity-ide/bin:$PATH"
+
+# Wrapper for git, crontab, and other CLI tools that invoke $EDITOR
+export EDITOR="env XDG_CONFIG_HOME=$HOME/neovim-distro NVIM_APPNAME=simple-nvim nvim"
+export VISUAL="env XDG_CONFIG_HOME=$HOME/neovim-distro NVIM_APPNAME=simple-nvim nvim"

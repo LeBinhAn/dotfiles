@@ -2795,6 +2795,6 @@ macos_menubar_title_max_length 0
 
 
 # BEGIN_KITTY_THEME
-# Flexoki (Light)
+# Catppuccin-Frappe
 include current-theme.conf
 # END_KITTY_THEME

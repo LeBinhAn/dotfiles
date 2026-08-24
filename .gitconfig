@@ -4,5 +4,33 @@
 [alias]
   purge = !git branch --v | grep '\\[gone\\]' | awk '{print $1}' | xargs git branch -D
 
-[difftool "delta"]
-	cmd = delta \"$LOCAL\" \"$REMOTE\"
+[core]
+    # Use delta as your main visual terminal pager for all Git commands
+    pager = delta
+
+[interactive]
+    # Keeps interactive staging (like `git add -p`) clean and colored
+    diffFilter = delta --color-only
+
+[delta]
+    # Active features: show line numbers, side-by-side view, and file navigation
+    features = line-numbers side-by-side navigate
+    # Choose your code theme (Run 'delta --list-syntax-themes' to see options)
+    syntax-theme = GitHub
+
+[delta "line-numbers"]
+    # Enhances the side-by-side split layout readability
+    line-numbers-left-format = "{nm:^4} │ "
+    line-numbers-right-format = "{np:^4} │ "
+
+[diff]
+    # Prevents git difftool from accidentally triggering delta in a loop
+    tool = vscode
+
+[difftool]
+    # Skips the annoying 'Launch tool [Y/n]?' confirmation prompt
+    prompt = false
+
+[difftool "vscode"]
+    # Defines an actual external editor for git difftool instead of delta
+    cmd = code --wait --diff \"$LOCAL\" \"$REMOTE\

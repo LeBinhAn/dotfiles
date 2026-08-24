@@ -34,14 +34,15 @@ return {
     name = "nord",
     priority = 1000,
   },
+  { "rose-pine/neovim", name = "rose-pine" },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "nord",
+      -- colorscheme = "nord",
       -- colorscheme = "tokyonight-day",
       -- colorscheme = "gruvbox",
       -- colorscheme = "kanagawa",
-      -- colorscheme = "rose-pine-moon",
+      colorscheme = "rose-pine-dawn",
       -- colorscheme = "catppuccin-frappe",
       -- colorscheme = "flexoki-light",
     },
