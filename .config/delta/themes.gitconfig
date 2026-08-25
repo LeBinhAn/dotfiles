@@ -1,0 +1,139 @@
+[delta "catppuccin-frappe"]
+    blame-palette = "#303446 #292c3c #232634 #414559 #51576d"
+    commit-decoration-style = "box ul"
+    dark = true
+    file-decoration-style = "#c6d0f5 ul"
+    file-style = "#c6d0f5"
+    hunk-header-decoration-style = "box ul"
+    hunk-header-file-style = "bold #c6d0f5"
+    hunk-header-line-number-style = "bold #a5adce"
+    hunk-header-style = "file line-number syntax"
+    line-numbers = true
+    line-numbers-left-style = "#737994"
+    line-numbers-right-style = "#737994"
+    line-numbers-zero-style = "#51576d"
+    minus-emph-style = "bold syntax #563f46"
+    minus-style = "syntax #41353f"
+    plus-emph-style = "bold syntax #404f4a"
+    plus-style = "syntax #343e44"
+    syntax-theme = "Catppuccin Frappe"
+
+[delta "catppuccin-macchiato"]
+    blame-palette = "#24273a #1e2030 #181926 #363a4f #494d64"
+    commit-decoration-style = "box ul"
+    dark = true
+    file-decoration-style = "#cad3f5 ul"
+    file-style = "#cad3f5"
+    hunk-header-decoration-style = "box ul"
+    hunk-header-file-style = "bold #cad3f5"
+    hunk-header-line-number-style = "bold #a5adcb"
+    hunk-header-style = "file line-number syntax"
+    line-numbers = true
+    line-numbers-left-style = "#6e738d"
+    line-numbers-right-style = "#6e738d"
+    line-numbers-zero-style = "#494d64"
+    minus-emph-style = "bold syntax #4f353e"
+    minus-style = "syntax #3c2c38"
+    plus-emph-style = "bold syntax #384643"
+    plus-style = "syntax #2f373d"
+    syntax-theme = "Catppuccin Macchiato"
+
+[delta "catppuccin-mocha"]
+    blame-palette = "#1e1e2e #181825 #11111b #313244 #45475a"
+    commit-decoration-style = "box ul"
+    dark = true
+    file-decoration-style = "#cdd6f4 ul"
+    file-style = "#cdd6f4"
+    hunk-header-decoration-style = "box ul"
+    hunk-header-file-style = "bold #cdd6f4"
+    hunk-header-line-number-style = "bold #a6adc8"
+    hunk-header-style = "file line-number syntax"
+    line-numbers = true
+    line-numbers-left-style = "#6c7086"
+    line-numbers-right-style = "#6c7086"
+    line-numbers-zero-style = "#45475a"
+    minus-emph-style = "bold syntax #492e3f"
+    minus-style = "syntax #372235"
+    plus-emph-style = "bold syntax #2b443e"
+    plus-style = "syntax #253337"
+    syntax-theme = "Catppuccin Mocha"
+
+[delta "dracula"]
+    blame-palette = "#282a36 #343746 #44475a #6272a4"
+    commit-decoration-style = "box ul"
+    dark = true
+    file-decoration-style = "#bd93f9 ul"
+    file-style = "#f8f8f2"
+    hunk-header-decoration-style = "box ul"
+    hunk-header-file-style = "bold #f8f8f2"
+    hunk-header-line-number-style = "bold #6272a4"
+    hunk-header-style = "file line-number syntax"
+    line-numbers = true
+    line-numbers-left-style = "#6272a4"
+    line-numbers-right-style = "#6272a4"
+    line-numbers-zero-style = "#44475a"
+    minus-emph-style = "bold syntax #5c2c3e"
+    minus-style = "syntax #3d2331"
+    plus-emph-style = "bold syntax #2c5c3e"
+    plus-style = "syntax #233d31"
+    syntax-theme = "Dracula"
+
+[delta "nord"]
+    blame-palette = "#2e3440 #3b4252 #434c5e #4c566a"
+    commit-decoration-style = "box ul"
+    dark = true
+    file-decoration-style = "#88c0d0 ul"
+    file-style = "#eceff4"
+    hunk-header-decoration-style = "box ul"
+    hunk-header-file-style = "bold #eceff4"
+    hunk-header-line-number-style = "bold #81a1c1"
+    hunk-header-style = "file line-number syntax"
+    line-numbers = true
+    line-numbers-left-style = "#4c566a"
+    line-numbers-right-style = "#4c566a"
+    line-numbers-zero-style = "#3b4252"
+    minus-emph-style = "bold syntax #4f2d3a"
+    minus-style = "syntax #3b222c"
+    plus-emph-style = "bold syntax #3b5349"
+    plus-style = "syntax #2e3e38"
+    syntax-theme = "Nord"
+
+[delta "gruvbox-dark"]
+    blame-palette = "#282828 #3c3836 #504945 #665c54"
+    commit-decoration-style = "box ul"
+    dark = true
+    file-decoration-style = "#fabd2f ul"
+    file-style = "#ebdbb2"
+    hunk-header-decoration-style = "box ul"
+    hunk-header-file-style = "bold #ebdbb2"
+    hunk-header-line-number-style = "bold #a89984"
+    hunk-header-style = "file line-number syntax"
+    line-numbers = true
+    line-numbers-left-style = "#7c6f64"
+    line-numbers-right-style = "#7c6f64"
+    line-numbers-zero-style = "#504945"
+    minus-emph-style = "bold syntax #502528"
+    minus-style = "syntax #341f21"
+    plus-emph-style = "bold syntax #3e4c28"
+    plus-style = "syntax #2e3820"
+    syntax-theme = "gruvbox-dark"
+
+[delta "tokyo-night"]
+    blame-palette = "#1a1b26 #1f2335 #24283b #292e42 #414868"
+    commit-decoration-style = "box ul"
+    dark = true
+    file-decoration-style = "#7aa2f7 ul"
+    file-style = "#c0caf5"
+    hunk-header-decoration-style = "box ul"
+    hunk-header-file-style = "bold #c0caf5"
+    hunk-header-line-number-style = "bold #7aa2f7"
+    hunk-header-style = "file line-number syntax"
+    line-numbers = true
+    line-numbers-left-style = "#565f89"
+    line-numbers-right-style = "#565f89"
+    line-numbers-zero-style = "#414868"
+    minus-emph-style = "bold syntax #4f2535"
+    minus-style = "syntax #371d28"
+    plus-emph-style = "bold syntax #284c48"
+    plus-style = "syntax #1d3534"
+    syntax-theme = "Visual Studio Dark+"

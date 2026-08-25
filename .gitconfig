@@ -1,3 +1,6 @@
+[include]
+	path = ~/.config/delta/themes.gitconfig
+
 [gpg]
 	format = ssh
 
@@ -5,32 +8,22 @@
   purge = !git branch --v | grep '\\[gone\\]' | awk '{print $1}' | xargs git branch -D
 
 [core]
-    # Use delta as your main visual terminal pager for all Git commands
-    pager = delta
+	pager = delta
 
 [interactive]
-    # Keeps interactive staging (like `git add -p`) clean and colored
-    diffFilter = delta --color-only
+	diffFilter = delta --color-only
 
 [delta]
-    # Active features: show line numbers, side-by-side view, and file navigation
-    features = line-numbers side-by-side navigate
-    # Choose your code theme (Run 'delta --list-syntax-themes' to see options)
-    syntax-theme = GitHub
+	features = catppuccin-mocha
+	navigate = true
+	line-numbers = true
+	side-by-side = false
 
-[delta "line-numbers"]
-    # Enhances the side-by-side split layout readability
-    line-numbers-left-format = "{nm:^4} │ "
-    line-numbers-right-format = "{np:^4} │ "
+[merge]
+	conflictstyle = zdiff3
 
 [diff]
-    # Prevents git difftool from accidentally triggering delta in a loop
-    tool = vscode
+	colorMoved = default
 
-[difftool]
-    # Skips the annoying 'Launch tool [Y/n]?' confirmation prompt
-    prompt = false
-
-[difftool "vscode"]
-    # Defines an actual external editor for git difftool instead of delta
-    cmd = code --wait --diff \"$LOCAL\" \"$REMOTE\
+[difftool "delta"]
+	cmd = delta "$LOCAL" "$REMOTE"
