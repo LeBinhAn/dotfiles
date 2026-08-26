@@ -224,3 +224,46 @@ export PATH="$HOME/.antigravity-ide/antigravity-ide/bin:$PATH"
 # Wrapper for git, crontab, and other CLI tools that invoke $EDITOR
 export EDITOR="env XDG_CONFIG_HOME=$HOME/neovim-distro NVIM_APPNAME=simple-nvim nvim"
 export VISUAL="env XDG_CONFIG_HOME=$HOME/neovim-distro NVIM_APPNAME=simple-nvim nvim"
+
+# Dynamically set Delta theme based on Kitty theme
+update_delta_theme() {
+  local kitty_conf="$HOME/.config/kitty/kitty.conf"
+  local current_theme="$HOME/.config/kitty/current-theme.conf"
+  local theme_name=""
+
+  if [[ -f "$kitty_conf" ]]; then
+    theme_name=$(sed -n '/# BEGIN_KITTY_THEME/,/# END_KITTY_THEME/p' "$kitty_conf" | grep -v 'BEGIN_KITTY_THEME' | grep -v 'END_KITTY_THEME' | grep -E '^# ' | head -n 1 | sed 's/^# *//')
+  fi
+
+  case "$theme_name" in
+    *"Tomorrow Night"*) export DELTA_FEATURES="tokyo-night" ;;
+    *"Tomorrow"*)       export DELTA_FEATURES="tomorrow-light" ;;
+    *"Latte"*)          export DELTA_FEATURES="catppuccin-latte" ;;
+    *"Dawn"*)           export DELTA_FEATURES="rose-pine-dawn" ;;
+    *"Frappe"*)         export DELTA_FEATURES="catppuccin-frappe" ;;
+    *"Macchiato"*)      export DELTA_FEATURES="catppuccin-macchiato" ;;
+    *"Mocha"*)          export DELTA_FEATURES="catppuccin-mocha" ;;
+    *"Rosé Pine Moon"*) export DELTA_FEATURES="rose-pine-moon" ;;
+    *"Rosé Pine"*)      export DELTA_FEATURES="rose-pine" ;;
+    *"Dracula"*)        export DELTA_FEATURES="dracula" ;;
+    *"Nord"*)           export DELTA_FEATURES="nord" ;;
+    *"Tokyo Night"*)    export DELTA_FEATURES="tokyo-night" ;;
+    *"Gruvbox Light"*)  export DELTA_FEATURES="gruvbox-light" ;;
+    *"Gruvbox"*)        export DELTA_FEATURES="gruvbox-dark" ;;
+    *)
+      # Fallback: check background color brightness in current-theme.conf
+      if [[ -f "$current_theme" ]]; then
+        local bg=$(awk '/^background/ {print $2}' "$current_theme")
+        if [[ "$bg" =~ ^#[e-fE-F] ]]; then
+          export DELTA_FEATURES="catppuccin-latte"
+        else
+          export DELTA_FEATURES="catppuccin-mocha"
+        fi
+      else
+        export DELTA_FEATURES="catppuccin-mocha"
+      fi
+      ;;
+  esac
+}
+update_delta_theme
+

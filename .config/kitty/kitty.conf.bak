@@ -1051,7 +1051,7 @@ window_padding_width 0 10
 #: Fade the text in inactive windows by the specified amount (a number
 #: between zero and one, with zero being fully faded).
 
-# hide_window_decorations no
+hide_window_decorations yes
 
 #: Hide the window decorations (title-bar and window borders) with
 #: yes. On macOS, titlebar-only and titlebar-and-corners can be used
@@ -1325,7 +1325,7 @@ window_padding_width 0 10
 
 #: The foreground and background colors.
 
-background_opacity 0.75
+background_opacity 0.6
 
 #: The opacity of the background. A number between zero and one, where
 #: one is opaque and zero is fully transparent. This will only work if
@@ -1998,7 +1998,7 @@ macos_quit_when_last_window_closed yes
 #: Use the macOS traditional full-screen transition, that is faster,
 #: but less pretty.
 
-macos_show_window_title_in all
+macos_show_window_title_in none
 
 #: Control where the window title is displayed on macOS. A value of
 #: window will show the title of the currently active window at the
@@ -2795,6 +2795,6 @@ macos_menubar_title_max_length 0
 
 
 # BEGIN_KITTY_THEME
-# Rosé Pine Dawn
+# 1984 Light
 include current-theme.conf
 # END_KITTY_THEME
