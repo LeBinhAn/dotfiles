@@ -4,11 +4,11 @@
 
 vim.opt.colorcolumn = "80"
 
-vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+vim.diagnostic.config({
   underline = true,
   virtual_text = {
     spacing = 5,
-    severity_limit = "Warning",
+    severity = { min = vim.diagnostic.severity.WARN },
   },
   update_in_insert = true,
 })
