@@ -47,10 +47,10 @@ return {
     "LazyVim/LazyVim",
     opts = {
       -- colorscheme = "nord",
-      -- colorscheme = "tokyonight-day",
+      -- colorscheme = "tokyonight-night",
       -- colorscheme = "gruvbox",
       -- colorscheme = "kanagawa",
-      colorscheme = "rose-pine-dawn",
+      colorscheme = "rose-pine-moon",
       -- colorscheme = "catppuccin-frappe",
       -- colorscheme = "flexoki-light",
     },

@@ -267,3 +267,6 @@ update_delta_theme() {
 }
 update_delta_theme
 
+
+# Added by the Postman CLI installer
+export PATH='/usr/local/bin':"$PATH"
