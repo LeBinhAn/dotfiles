@@ -23,18 +23,20 @@ config.color_scheme = appearance_themes[appearance]
 config.window_decorations = "RESIZE"
 config.initial_cols = 150
 config.initial_rows = 40
+config.use_resize_increments = true
 
 -- Tabs
+config.enable_tab_bar = true
 config.use_fancy_tab_bar = false
-config.show_tabs_in_tab_bar = false
-config.show_new_tab_button_in_tab_bar = false
+config.show_tabs_in_tab_bar = true
+config.show_new_tab_button_in_tab_bar = true
 config.enable_scroll_bar = false
 
 config.window_padding = {
-	left = 0,
-	right = 0,
-	top = 0,
-	bottom = 0,
+	left = 12,
+	right = 12,
+	top = 10,
+	bottom = 10,
 }
 
 -- Text

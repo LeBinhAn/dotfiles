@@ -39,7 +39,7 @@ return {
     name = "rose-pine",
     opts = {
       styles = {
-        transparency = true,
+        -- transparency = true,
       },
     },
   },
@@ -50,9 +50,9 @@ return {
       -- colorscheme = "tokyonight-night",
       -- colorscheme = "gruvbox",
       -- colorscheme = "kanagawa",
-      colorscheme = "rose-pine-moon",
+      -- colorscheme = "rose-pine-dawn",
       -- colorscheme = "catppuccin-frappe",
-      -- colorscheme = "flexoki-light",
+      colorscheme = "flexoki-light",
     },
   },
 }
