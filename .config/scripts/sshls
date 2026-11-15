@@ -1,0 +1,28 @@
+#!/usr/bin/env zsh
+
+# Đảm bảo zsh hỗ trợ các pattern matching nâng cao
+emulate -L zsh
+
+# Kiểm tra xem file config có tồn tại không
+SSH_CONFIG="$HOME/.ssh/config"
+if [ ! -f "$SSH_CONFIG" ]; then
+    echo "Không tìm thấy file cấu hình tại $SSH_CONFIG"
+    exit 1
+fi
+
+# Đọc file ~/.ssh/config, lọc các dòng Host và loại bỏ ký tự đại diện (*)
+# Dùng fzf để tạo giao diện TUI với giao diện đẹp mắt
+selected_host=$(awk '$1 == "Host" && $2 != "*" {print $2}' "$SSH_CONFIG" | \
+    fzf --height=40% \
+        --layout=reverse \
+        --border=rounded \
+        --prompt="🚀 Chọn Server SSH > " \
+        --pointer="▶" \
+        --marker="✓")
+
+# Nếu người dùng chọn host và nhấn Enter
+if [[ -n "$selected_host" ]]; then
+    print -P "%F{green}➔ Đang kết nối tới: %B$selected_host%b%f"
+    ssh "$selected_host"
+fi
+
